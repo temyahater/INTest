@@ -119,3 +119,38 @@ function f1(){
     return new Function('b', 'return a1+b');
 }
 console.log(f1()(1));
+
+
+function Smiles(str){
+    let out='';
+    for(let i=0;i<str.length;i++){
+        str.toLowerCase().split(str[i].toLowerCase()).length-1>1?out+=')':out+='('; 
+    }
+    return out;
+}
+
+// function Smiles(str){
+//         return str.toLowerCase().split('').map((symb,i,strTemp)=>{
+//             return strTemp.indexOf(symb)==strTemp.lastIndexOf(symb)?'(':')';
+//         }).join('');
+// }
+
+console.log(Smiles('GnFFFFFFFFwF'));
+
+function camelCase(str){
+    return str.split(' ').map(el=>{
+        return el.split('').map((el,i)=>{
+            return i==0?el.toUpperCase():el;
+        }).join('');
+    }).join('');
+}
+
+console.log(camelCase('hello case'))
+
+function wordReverse(str){
+    return str.split(' ').map(el=>{
+        return el.length>4?el.split('').reverse().join(''): el;
+    }).join(' ');
+}
+
+console.log(wordReverse('this is hello'));
