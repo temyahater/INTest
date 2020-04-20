@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "model": "apple",
+        "description": "some desc",
+        "price": "1000$",
+        "image": "iphone.jpeg"
+    },
+    {
+        "id": 2,
+        "model": "honor",
+        "description": "some desc",
+        "price": "600$",
+        "image": "iphone.jpeg"
+    },
+    {
+        "id": 3,
+        "model": "samsung",
+        "description": "some desc",
+        "price": "1100$",
+        "image": "iphone.jpeg"
+    },
+    {
+        "id": 4,
+        "model": "huawei",
+        "description": "some desc",
+        "price": "900$",
+        "image": "iphone.jpeg"
+    },
+    {
+        "id": 5,
+        "model": "apple",
+        "description": "some desc",
+        "price": "1000$",
+        "image": "iphone.jpeg"
+    },
+    {
+        "id": 6,
+        "model": "honor",
+        "description": "some desc",
+        "price": "600$",
+        "image": "iphone.jpeg"
+    },
+    {
+        "id": 7,
+        "model": "samsung",
+        "description": "some desc",
+        "price": "1100$",
+        "image": "iphone.jpeg"
+    }
+]
