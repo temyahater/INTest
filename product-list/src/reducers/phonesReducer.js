@@ -1,6 +1,7 @@
 const prevState = {
     loading: false,
-    phones: []
+    phones: [],
+    sort: 'def'
 };
 
 export default(state=prevState,action)=>{
@@ -16,6 +17,9 @@ export default(state=prevState,action)=>{
             return {
                 ...state, loading: action.payload
             };
+        case 'UPDATE_SORT':
+            return { ...state,
+                sort: action.payload };
         default:
             return state;
     }

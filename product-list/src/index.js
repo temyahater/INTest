@@ -1,10 +1,9 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import initStore from './stores/store';
 import './index.css';
-import App from './App';
+import App from './containersJs/App';
 import * as serviceWorker from './serviceWorker';
 
 const store = initStore();
