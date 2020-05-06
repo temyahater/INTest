@@ -66,9 +66,9 @@ function PrintUser(login,password,callback){
     callback();
 }
 
-PrintUser('1','2', ()=>{
-    setTimeout(()=>{ console.log('callback') }, 2000);
-});
+// PrintUser('1','2', ()=>{
+//     setTimeout(()=>{ console.log('callback') }, 2000);
+// });
 
 
 for(let key in {1:1,0:0}){ console.log(key); }; 
@@ -154,3 +154,13 @@ function wordReverse(str){
 }
 
 console.log(wordReverse('this is hello'));
+
+console.log('----------------------------------------------');
+
+
+function Ipv4(str){
+    return (str.split('.').length==4)?(str.split('.').map(el=>{ 
+        return (el>=0 && el<=255 && el===String(Number(el)))?el:false; }).join().indexOf(false)>=0)?false:true:false;
+}
+
+console.log(Ipv4('120.212.1.0'));
