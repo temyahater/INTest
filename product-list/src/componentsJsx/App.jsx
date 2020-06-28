@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import  NavBar  from './NavBar';
 import Phone from './Phone';
+import { setPhones } from '../actions/phonesAction';
 
 
 export function sortHighPrice(phones,type){
@@ -51,6 +52,7 @@ export default class App extends Component {
             }):'Loading...'
           }
         </div>
+        <button onClick={()=>{console.log(phones); return setPhones(sortLowPrice(phones))}}>GAG</button>
       </div>
     );
   }

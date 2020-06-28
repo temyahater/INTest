@@ -34,9 +34,9 @@ class NavBar extends Component {
         <div className="form-inline my-2 my-lg-0">
           <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
           <button className="btn btn-outline-success my-2 my-sm-0">Search</button>
-          <button className="btn btn-outline-dark ml-2" onClick={()=>{ this.handleItemClick('def'); console.log(this.state)}}>Def</button>
-          <button className="btn btn-outline-dark ml-2" onClick={()=>{ this.handleItemClick('cheap'); console.log(this.state);}}>Cheap</button>
-          <button className="btn btn-outline-dark ml-2" onClick={()=>{ this.handleItemClick('expensive'); console.log(this.state)}}>Expensive</button>
+          <button className="btn btn-outline-dark ml-2" onClick={()=>{ this.handleItemClick('def'); }}>Def</button>
+          <button className="btn btn-outline-dark ml-2" onClick={()=>{ this.handleItemClick('cheap'); }}>Cheap</button>
+          <button className="btn btn-outline-dark ml-2" onClick={()=>{ this.handleItemClick('expensive'); }}>Expensive</button>
         </div>
       </div>
     </nav>
