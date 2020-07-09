@@ -3,6 +3,7 @@ const app=express();
 const cors=require('cors');
 const bodyParser=require('body-parser');
 const mongoClient=require('mongodb').MongoClient;
+const nodemailer=require('nodemailer');
 let db;
 // const fs = require('fs');
 
@@ -38,7 +39,7 @@ app.post('/phones',(req,res)=>{
 });
 
 app.put('/phones/:id',(req,res)=>{
-    db.collection('phones').updateOne({_id: Number(req.params.id)},{$set:{...req.body}},(err,result)=>{
+    db.collection('phones').updateOne({_id: +(req.params.id)},{$set:{...req.body}},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -48,7 +49,7 @@ app.put('/phones/:id',(req,res)=>{
 });
 
 app.delete('/phones/:id',(req,res)=>{
-    db.collection('phones').deleteOne({_id: Number(req.params.id)},(err,result)=>{
+    db.collection('phones').deleteOne({_id: +(req.params.id)},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -69,7 +70,7 @@ app.get('/users',(req,res)=>{
 
 app.post('/users',(req,res)=>{
     console.log(req.body);
-    db.collection('users').insertOne({_id:req.body.id,name:req.body.name,surname:req.body.surname,login:req.body.login,email:req.body.email,password:req.body.password,stack:req.body.stack},(err,result)=>{
+    db.collection('users').insertOne({_id:req.body.id,name:req.body.name,surname:req.body.surname,login:req.body.login,email:req.body.email,password:req.body.password,stack:req.body.stack,orders:req.body.orders},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -79,7 +80,7 @@ app.post('/users',(req,res)=>{
 });
 
 app.put('/users/:id',(req,res)=>{
-    db.collection('users').updateOne({_id: Number(req.params.id)},{$set:{...req.body}},(err,result)=>{
+    db.collection('users').updateOne({_id: +(req.params.id)},{$set:{...req.body}},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -89,7 +90,7 @@ app.put('/users/:id',(req,res)=>{
 });
 
 app.delete('/users/:id',(req,res)=>{
-    db.collection('users').deleteOne({_id: Number(req.params.id)},(err,result)=>{
+    db.collection('users').deleteOne({_id: +(req.params.id)},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -110,7 +111,7 @@ app.get('/userstoreg',(req,res)=>{
 
 app.post('/userstoreg',(req,res)=>{
     console.log(req.body);
-    db.collection('userstoreg').insertOne({_id:req.body.id,name:req.body.name,surname:req.body.surname,login:req.body.login,email:req.body.email,password:req.body.password,stack:req.body.stack},(err,result)=>{
+    db.collection('userstoreg').insertOne({_id:req.body.id,name:req.body.name,surname:req.body.surname,login:req.body.login,email:req.body.email,password:req.body.password,stack:req.body.stack,orders:req.body.orders},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -120,7 +121,7 @@ app.post('/userstoreg',(req,res)=>{
 });
 
 app.put('/userstoreg/:id',(req,res)=>{
-    db.collection('userstoreg').updateOne({_id: Number(req.params.id)},{$set:{...req.body}},(err,result)=>{
+    db.collection('userstoreg').updateOne({_id: +(req.params.id)},{$set:{...req.body}},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -130,7 +131,7 @@ app.put('/userstoreg/:id',(req,res)=>{
 });
 
 app.delete('/userstoreg/:id',(req,res)=>{
-    db.collection('userstoreg').deleteOne({_id: Number(req.params.id)},(err,result)=>{
+    db.collection('userstoreg').deleteOne({_id: +(req.params.id)},(err,result)=>{
         if(err){
             console.log(err);
             return res.sendStatus(500);
@@ -138,6 +139,116 @@ app.delete('/userstoreg/:id',(req,res)=>{
         res.sendStatus(200);
     })
 });
+
+app.get('/feedbacks',(req,res)=>{
+    db.collection('feedbacks').find().toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.send(data);
+    })
+});
+
+app.post('/feedbacks',(req,res)=>{
+    console.log(req.body);
+    db.collection('feedbacks').insertOne({_id:req.body.id,username:req.body.username,feedback:req.body.feedback,like:req.body.like},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+    })
+    res.sendStatus(200);
+});
+
+app.delete('/feedbacks/:id',(req,res)=>{
+    db.collection('feedbacks').deleteOne({_id: +(req.params.id)},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
+app.get('/orders',(req,res)=>{
+    db.collection('orders').find().toArray((err,data)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.send(data);
+    })
+});
+
+app.post('/orders',(req,res)=>{
+    console.log(req.body);
+    db.collection('orders').insertOne({_id:req.body.id,username:req.body.username,order:req.body.order,processed:req.body.processed,delivered:req.body.delivered,adress:req.body.adress},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+    })
+    res.sendStatus(200);
+});
+
+app.put('/orders/:id',(req,res)=>{
+    db.collection('orders').updateOne({_id: +(req.params.id)},{$set:{...req.body}},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
+// app.delete('/orders/:id',(req,res)=>{
+//     db.collection('orders').deleteOne({_id: +(req.params.id)},(err,result)=>{
+//         if(err){
+//             console.log(err);
+//             return res.sendStatus(500);
+//         }
+//         res.sendStatus(200);
+//     })
+// });
+
+app.delete('/orders/:username',(req,res)=>{
+    db.collection('orders').deleteMany({username: req.params.username},(err,result)=>{
+        if(err){
+            console.log(err);
+            return res.sendStatus(500);
+        }
+        res.sendStatus(200);
+    })
+});
+
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail', auth:{user:'howkiwe@gmail.com',pass:'howkiwe1'}    
+});
+
+app.post('/forgotpass',(req,res)=>{
+    transporter.sendMail({
+        from:'howkiwe@gmail.com',
+        to:req.body.email,
+        subject:req.body.login,
+        text:req.body.password
+    },(err,inf)=>{
+        err?console.log(err):console.log('email sent to '+inf.response);
+    });
+    // db.collection('users').find().toArray((err,data)=>{
+    //     transporter.sendMail({
+    //             from:'howkiwe@gmil.com',
+    //             to:'artem-ky2012@yandex.ru',
+    //             subject: data.find(el=>el.email==req.body.email).login,
+    //             text: data.find(el=>el.email==req.body.email).password
+    //         },(err,inf)=>{
+    //             err?console.log(err):console.log('email sent to '+inf.response);
+    //         });
+        
+    // })
+    res.sendStatus(200);
+})
 
 mongoClient.connect('mongodb://localhost:27017/ProductList',{useNewUrlParser: true, useUnifiedTopology: true},(err,data)=>{
     if(err) return console.log(err);

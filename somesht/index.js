@@ -410,6 +410,8 @@ function govnokakoeto(obj){
     return Object.keys(obj[Object.keys(obj).filter(el=>typeof obj[el]=='object')]);
 }
 
+
+
 function govnokakoetoX2(){ //rofl
     let path='';
     return function govnokakoetoRec(obj,key){ 
@@ -423,7 +425,6 @@ function govnokakoetoX2(){ //rofl
         return false;
     }
 }
-
 
 
 console.log(govnokakoetoX2()(myTestObj,'tochtonado'));
@@ -509,8 +510,6 @@ function testB(){
 String.prototype.toBase64=function(){return btoa(this)};
 String.prototype.fromBase64=function(){return atob(this)};
 
-// console.log('this is a string!!'.toBase64());
-// console.log('dGhpcyBpcyBhIHN0cmluZyEh'.fromBase64())
 
 function toUnderscore(str){
 //    return typeof str=='string'?!!str&&[...str].map(el=>el==el.toUpperCase()&&el!=Number(el)?'_'+el:el).join('').slice(1).toLocaleLowerCase():String(str);
