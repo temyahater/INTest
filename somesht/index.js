@@ -529,3 +529,101 @@ function incrementString(str){
 }
 
 console.log(incrementString('foobar009'));
+
+function moveZeros(arr){
+    return arr.filter(e=>e!==0).concat(arr.filter(e=>e===0));
+}
+
+console.log(moveZeros([false,1,0,1,2,0,1,3,"a"]));
+
+function whoIsNext(arr,n){
+    // if(n==1)
+    //     return arr[0];
+    // arr.push(arr[0],arr[0]);
+    // arr=arr.slice(1);
+    // return whoIsNext(arr,n-1);
+    return n==1?arr[0]:arr.push(arr[0],arr[0])&&whoIsNext(arr.slice(1),n-1);
+    // while(n!==1){
+    //     arr.push(arr[0],arr[0]);
+    //     arr=arr.slice(1);
+    //     n--;
+    // }
+    // return arr[0];
+}
+
+console.log(whoIsNext(["Sheldon", "Leonard", "Penny", "Rajesh", "Howard"], 25));
+
+// 5 15 35 75 155 315
+
+
+function ipsBetween(ip1,ip2){
+    return ip2.split('.')[2]==1?256+(+ip2.split('.')[3])-ip1.split('.')[3]:ip2.split('.')[3]-ip1.split('.')[3];
+}
+
+console.log(ipsBetween("10.0.0.0", "10.0.0.50"));
+console.log(ipsBetween("10.0.0.0", "10.0.1.0"));
+console.log(ipsBetween("20.0.0.10", "20.0.1.0"));
+
+
+function weirdReverse(a){
+    // return a.map((e,i)=>a[a.length-i-1]);//sLIshKoM MnOgO bYkV
+    return a.sort(e=>-1);
+
+}
+
+console.log(weirdReverse([1,2,3,'a','b','c',[]]));
+console.log(weirdReverse([1,2,3,4,5]));
+
+function camelize(str){
+    return str.split('-').map((e,i)=>i==0?e:e=e[0].toUpperCase()+e.slice(1)).join('');
+}
+
+console.log(camelize("background-color"));
+
+function isMerge(s,p1,p2){
+    // return [...p1].reduce((p,e)=>s.indexOf(e)!=-1)&&[...p2].reduce((p,e)=>s.indexOf(e)!=-1);
+    // return [...p1+p2].filter(e=>s.indexOf(e)!=-1).length==s.length;
+    return [...s].filter(e=>(p1+p2).indexOf(e)!=-1).length==(p1+p2).length&&(p1+p2).length==s.length;
+}
+
+console.log(isMerge('codewars', 'code', 'wars'));
+console.log(isMerge('codewars', 'code', 'wasr'));
+console.log(isMerge('codewars', 'cdw', 'oears'));
+console.log(isMerge('codewars', 'cod', 'wars'));
+
+function dblLinear(n) {
+    let u=[1],x=0,y=0;
+    while(u.length<=n){
+        let uX=2*u[x]+1,uY=3*u[y]+1;
+        uX<=uY?u.push(uX)&&x++&&uX==uY?y++:0:u.push(uY)&&y++;
+    }
+    return u;
+}
+
+console.log(dblLinear(30));
+
+console.log('------------------------------------------------------------');
+
+function nextSmaller(n){
+    // let arr=new Set();
+    // while(arr.size!=[...''+n].reduce((p,e,i)=>p*=i+1,1))
+    //     arr.add([...''+n].sort(()=>Math.random()-0.5).join(''));
+    // return [...arr].filter(e=>e!=n&&e<n&&e[0]!=0).reduce((p,e)=>Math.max(p,e),-1);
+    //slishkom dolgo slishkom ploho
+    const arr = [...''+n].map(e=>+e);
+    let i,max=9;
+    for(i=arr.length;i--;){
+        if(arr[i]>max) break;
+        max=arr[i];}
+    const pI=i;
+    const p=arr[pI];
+    if(i<0) return -1;
+    for(i=arr.length;i--;){
+        if(arr[i]<p) break;}   
+    arr[pI]=arr[i];
+    arr[i]=p;
+    return arr[0]===0?-1:+arr.slice(0,pI+1).concat(arr.slice(pI+1).reverse()).join('');
+    //Next lexicographical permutation algorithm polnaya parasha i nikogda bolshe ne bydy pisat' takoe
+}
+
+console.log(nextSmaller(1027));
