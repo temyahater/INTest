@@ -605,25 +605,46 @@ console.log(dblLinear(30));
 console.log('------------------------------------------------------------');
 
 function nextSmaller(n){
-    // let arr=new Set();
-    // while(arr.size!=[...''+n].reduce((p,e,i)=>p*=i+1,1))
-    //     arr.add([...''+n].sort(()=>Math.random()-0.5).join(''));
-    // return [...arr].filter(e=>e!=n&&e<n&&e[0]!=0).reduce((p,e)=>Math.max(p,e),-1);
-    //slishkom dolgo slishkom ploho
-    const arr = [...''+n].map(e=>+e);
-    let i,max=9;
-    for(i=arr.length;i--;){
-        if(arr[i]>max) break;
-        max=arr[i];}
-    const pI=i;
-    const p=arr[pI];
-    if(i<0) return -1;
-    for(i=arr.length;i--;){
-        if(arr[i]<p) break;}   
-    arr[pI]=arr[i];
-    arr[i]=p;
-    return arr[0]===0?-1:+arr.slice(0,pI+1).concat(arr.slice(pI+1).reverse()).join('');
+    let arr=new Set();
+    while(arr.size!=[...''+n].reduce((p,e,i)=>p*=i+1,1))
+        arr.add([...''+n].sort(()=>Math.random()-0.5).join(''));
+    return [...arr].filter(e=>e!=n&&e<n&&e[0]!=0).reduce((p,e)=>Math.max(p,e),-1);
+    // slishkom dolgo slishkom ploho
+    // const arr = [...''+n].map(e=>+e);
+    // let i,max=9;
+    // for(i=arr.length;i--;){
+    //     if(arr[i]>max) break;
+    //     max=arr[i];}
+    // const pI=i;
+    // const p=arr[pI];
+    // if(i<0) return -1;
+    // for(i=arr.length;i--;){
+    //     if(arr[i]<p) break;}   
+    // arr[pI]=arr[i];
+    // arr[i]=p;
+    // return arr[0]===0?-1:+arr.slice(0,pI+1).concat(arr.slice(pI+1).reverse()).join('');
     //Next lexicographical permutation algorithm polnaya parasha i nikogda bolshe ne bydy pisat' takoe
 }
 
 console.log(nextSmaller(1027));
+console.log('------------------------------------------------------------');
+
+function order(s){
+    return s.split(' ').sort((a,b)=>[...a].find(e=>+e)-[...b].find(e=>+e)).join(' ');
+}
+
+console.log(order('is2 Thi1s T4est 3a'));
+
+console.log('------------------------------------------------------------');
+
+
+function validParentheses(p){
+    // return [...p].filter(e=>e==')').length==[...p].filter(e=>e=='(').length&&p[0]!=')'&&p[p.length-1]!='(';
+    // let l=p.length;
+    // for(let i=0;i<=l/2;i++)
+    //     p=p.replace('()','');
+    // return !p;
+    return p.length!=0?validParentheses(p=p.replace('()','')):p;
+}
+
+console.log(validParentheses( "(())((()())())" ));
