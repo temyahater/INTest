@@ -644,7 +644,183 @@ function validParentheses(p){
     // for(let i=0;i<=l/2;i++)
     //     p=p.replace('()','');
     // return !p;
-    return p.length!=0?validParentheses(p=p.replace('()','')):p;
+    // return p==p.replace('()','')?!p:validParentheses(p.replace('()',''));
+    return p!=p.replace('()','')?validParentheses(p.replace('()','')):!p;
+}
+console.log(validParentheses(')(())'));
+
+function findOutlier(n){
+    return n.filter(e=>e%2==0).length<n.filter(e=>e%2).length?+n.filter(e=>e%2==0):+n.filter(e=>e%2);
 }
 
-console.log(validParentheses( "(())((()())())" ));
+console.log(findOutlier([0, 1, 2]));
+
+
+function iqTest(s){
+    return s.split(' ').filter(e=>e%2==0).length<s.split(' ').filter(e=>e%2).length?s.split(' ').indexOf(''+s.split(' ').filter(e=>e%2==0))+1:s.split(' ').indexOf(''+s.split(' ').filter(e=>e%2))+1;
+}
+
+console.log(iqTest("2 4 7 8 10"));
+
+function uniqueInOrder(s){
+    return [...s].filter((e,i)=>e!=s[i+1]);
+}
+
+console.log(uniqueInOrder('AAAABBBCCDAABBB'));
+
+console.log('---------------------------------------------------------');
+
+function anagrams(s,a){
+    // return a.filter(e=>e.length==s.length).filter(e=>[...s].filter(i=>e.indexOf(i)!=-1).length==s.length).filter(e=>[...e].filter(i=>s.indexOf(i)!=-1).length==s.length);
+    // return a.filter(e=>[...s].filter((j,i)=>e.indexOf(j)!=-1&&s.indexOf(e[i])!=-1).length==s.length&&e.length==s.length);
+    // return a.filter((p,j)=>a.map(e=>{[...s].forEach(i=>e=e.replace(i,''));return e;})[j]=='');
+    return a.filter(e=>[...e].sort().join('')==[...s].sort().join(''))
+}
+
+console.log(anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']));
+
+function countSmileys(s){
+    return s.filter(e=>/[':;']/.exec(e)&&/[')D']/.exec(e)&&!/['o_']/.exec(e)&&e.length<4)
+    // return s.filter(e=>e.length==2?/[:;]/.exec(e)&&/[)D]/.exec(e):/[:;]/.exec(e)&&/[)D]/.exec(e)&&/[-~]/.exec(e))
+}
+
+console.log(countSmileys([':---)', '))', ';~~D', ';D']));
+
+function isPangram(s){
+    return [...new Set([...s.toLocaleLowerCase()])].filter(e=>/[A-z]/.exec(e)).length==26;
+}
+
+console.log(isPangram('The quick brown fox jumps over the lazy dog'))
+
+function validBraces(p){
+    // return p!=p.replace('()','')?validParentheses(p.replace('()','')):!p;
+    return p!=p.replace('()','').replace('{}','').replace('[]','')?validBraces(p.replace('()','').replace('{}','').replace('[]','')):!p;
+}
+console.log(validBraces('([{}])'));
+
+function number9(n){
+    let c=0;
+    for(let i=0;i<=n;i++){
+        if((''+i).indexOf('9')!=-1) c++;
+    }
+    return c;
+}
+
+console.log(number9(98));
+
+console.log('---------------------------------------------------------');
+
+
+function fromRgb(r,g,b){
+    // return [r,g,b].map(e=>e<0?'00':e>255?'ff':(''+e).length==1?'0'+e.toString(16):e.toString(16)).join('').toUpperCase();
+    return [r,g,b].map(e=>e<0?'00':e>255?'ff':e.toString(16)).map(e=>e.length==1?'0'+e:e).join('').toUpperCase();
+}
+
+console.log(fromRgb(8,151,211));
+
+function fromHex(s){
+    // let arr=[];
+    // for(let i=1;i<s.length;i+=2)
+    //     arr.push(s.substring(i,i+2));
+    // arr=arr.map(e=>parseInt(e,16));
+    // return {r:arr[0],g:arr[1],b:arr[2]};
+
+    // let arr=s.slice(1).match(new RegExp('.{1,' + 2 + '}', 'g')).map(e=>parseInt(e,16));
+    // return {r:arr[0],g:arr[1],b:arr[2]};
+    return Object.fromEntries(s.slice(1).match(new RegExp('.{1,'+2+'}','g')).map((e,i)=>[(i==0?'r':i==1?'g':'b'),parseInt(e,16)]));
+}
+
+console.log(fromHex('#FF9933'));
+
+
+function decoder(s,m) {
+    // return s.substring(0,s.indexOf(m))+[...s.substring(s.indexOf(m)+1)].sort(e=>-1).join('');
+    // return s.split(m)[0].concat(s.split(m)[1].split('').reverse().join(''))
+    return s.split(m).filter((e,i)=>i%2==0).concat(s.split(m).filter((e,i)=>i%2==1).reverse().map(e=>[...e].reverse().join(''))).join('');
+}
+
+console.log(decoder("Lor-.tile gnicsipida rutetcesnoc ,tema tis rolod muspi me", '-'));
+
+
+function zerosFact(n){
+    let count=0;
+    for(let i=5;i<=n;i*=5)
+        count+=Math.trunc(n/i);
+    return count;
+}
+
+console.log(zerosFact(12));
+
+function n2n(n,k){
+    return (''+n**n).slice((''+n**n).length-k);
+}
+
+console.log(n2n(5,3));
+
+function rot13(s) {
+    // return [...s].map(e=>e.replace(/[A-Za-z]/gi,String.fromCharCode(e.charCodeAt(0)+(e.toUpperCase()<'N'?13:-13)))).join('');
+    return s.replace(/[A-Za-z]/gi,(e)=>String.fromCharCode(e.charCodeAt(0)+(e.toUpperCase()<'N'?13:-13)))
+}
+
+console.log(rot13('grfg'));
+
+
+function searchSubstr(s,n,a){
+        let t=s;
+        while(t.indexOf(n)!=-1)
+            t=t.replace(n,'');
+        return (s.length-t.length)/n.length;
+}
+
+console.log(searchSubstr('aa_bb_cc_dd_bb_e', 'bb', true))
+
+function findOdd(a){
+    // return a.filter(e=>a.join('').match(new RegExp(e,'g')).length%2==1);
+    return a.reduce((p,e)=>p^e);
+}
+
+console.log(findOdd([ 1, 1, 1, 1, 1, 1, 10, 1, 1, 1, 1 ]));
+
+
+function willFit(p,b){
+    // return p.filter((e,i)=>e>=b[i]).length<2;
+    // return b.filter((e,i)=>e>p[i]).length>=2&&p.reduce((a,b)=>Math.min(a,b))<b.reduce((a,b)=>Math.min(a,b));
+    // return b.filter((e,i)=>e>p[i]).length>=2&&Math.min.apply(0,p)<Math.min.apply(0,b);
+    return b.every(e=>e>Math.min.apply(0,p))?b.filter((e,i)=>e>p[i]).length>=2:!1;
+}
+
+console.log(willFit([ 10, 10, 10 ],[ 50, 50, 4 ]));
+
+function duplicateCount(s){
+    // return new Set([...s.toLowerCase()].filter(e=>s.toLowerCase().replace(e,'').indexOf(e)!=-1)).size;
+    return [...s.toLowerCase()].filter(e=>s.toLowerCase().indexOf(e)!=s.toLowerCase().lastIndexOf(e))
+}
+
+console.log(duplicateCount("aabBcde"));
+
+
+function encryptThis(s){
+    return s.split(' ').map(e=>[...e].map((j,i)=>i==0?j.charCodeAt():i==1?e[e.length-1]:i==e.length-1?e[1]:j).join('')).join(' ');
+}
+
+console.log(encryptThis("hello world"));
+
+function decipherThis(s){
+    return s.split(' ').map(e=>String.fromCharCode([...e].filter(e=>+e==e).join(''))+[...e].filter(e=>+e!=e).map((j,i)=>i==0?e[e.length-1]:i==[...e].filter(e=>+e!=e).length-1?[...e].filter(e=>+e!=e)[0]:j[0]).join('')).join(' ')
+}; 
+
+console.log(decipherThis('72olle 103doo 100ya'));
+
+function breakCamelCase(s){
+    return [...s].map(e=>e<'a'?' '+e:e).join('');
+}
+
+console.log(breakCamelCase('camelCasing'));
+
+function findUniq(a){
+    // return +a.filter(e=>a.indexOf(e)==a.lastIndexOf(e));
+    // return +a.filter((e,i)=>i==a.lastIndexOf(e));
+    return a.find(e=>e!=a[0]&&e!=a[a.length-1]);
+}
+
+console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
