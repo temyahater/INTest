@@ -819,8 +819,15 @@ console.log(breakCamelCase('camelCasing'));
 
 function findUniq(a){
     // return +a.filter(e=>a.indexOf(e)==a.lastIndexOf(e));
-    // return +a.filter((e,i)=>i==a.lastIndexOf(e));
-    return a.find(e=>e!=a[0]&&e!=a[a.length-1]);
+    return +a.filter((e,i)=>i==a.lastIndexOf(e));
 }
 
 console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]));
+
+
+function isPrime(n){
+    return n>1&&n!=2&&n!=3?n%2||n%3==0?!1:!!1:!1;
+}
+
+console.log(isPrime(13))
+  
