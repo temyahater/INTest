@@ -123,7 +123,7 @@ header{
     .header-info{
         height: 83%;
         width: 100%;
-        background: url(/images/car.png);
+        background-image: url(images/car.png);
 
         .header-info-button{
             width: 9.5%;
@@ -156,7 +156,7 @@ main{
     .main-div-titles{
         font-size: 30px;
         line-height: 36px;
-        font-family: Peugeot;
+        font-family: 'Peugeot';
         text-align: center;
         height: max-content;
     }
@@ -584,7 +584,7 @@ main{
                 width: 100%;
                 height: 40%;
                 margin-top: 3.5%;
-                background: url(/images/logo2.png);
+                background: url(images/logo2.png);
                 background-repeat: no-repeat;
                 background-position-x: right;
                 background-position-y: bottom;
@@ -826,4 +826,4 @@ footer{
 }
 
 @import url(https://fonts.googleapis.com/css2?family=Aclonica&display=swap);
-@import url(//db.onlinewebfonts.com/c/a8255842f22d57e8d71520cd861bda96?family=Peugeot);
+@import url(http://db.onlinewebfonts.com/c/a8255842f22d57e8d71520cd861bda96?family=Peugeot);
