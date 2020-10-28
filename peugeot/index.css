@@ -1,0 +1,1066 @@
+@import url(https://fonts.googleapis.com/css2?family=Aclonica&display=swap);
+@import url(//db.onlinewebfonts.com/c/a8255842f22d57e8d71520cd861bda96?family=Peugeot);
+body {
+  width: 1280px;
+  height: 5341px;
+  padding: 0;
+  margin: 0 auto;
+  background: #F1F3F2;
+}
+
+header {
+  width: 100%;
+  height: 11.5%;
+}
+
+header .header-nav {
+  height: 17%;
+  width: 100%;
+}
+
+header .header-nav .header-nav-icons {
+  height: 34%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #171717;
+}
+
+header .header-nav .header-nav-icons .header-nav-icon {
+  height: 100%;
+  padding-left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .header-nav .header-nav-icons .header-nav-icon:hover {
+  background: #414141;
+  cursor: pointer;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-car {
+  width: 10%;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-location {
+  width: 15%;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-message {
+  width: 13%;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-call {
+  width: 17%;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-point1 {
+  width: 9%;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-point2 {
+  width: 6%;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-recall {
+  width: 18%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: white;
+  background: #0162C5;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+header .header-nav .header-nav-icons .header-nav-icons-recall:hover {
+  background: #316beb;
+  cursor: pointer;
+}
+
+header .header-nav .header-nav-links {
+  height: 66%;
+  width: 100%;
+  background: #142032;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 14px;
+}
+
+header .header-nav .header-nav-links .header-nav-link {
+  height: 100%;
+  padding-left: 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  color: white;
+}
+
+header .header-nav .header-nav-links .header-nav-links-button:hover {
+  cursor: pointer;
+}
+
+header .header-nav .header-nav-links .header-nav-links-logo {
+  width: 10%;
+}
+
+header .header-nav .header-nav-links .header-nav-links-models {
+  width: 11%;
+}
+
+header .header-nav .header-nav-links .header-nav-links-search {
+  width: 4.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .header-info {
+  height: 83%;
+  width: 100%;
+  background: url(/images/car.png);
+}
+
+header .header-info .header-info-button {
+  width: 9.5%;
+  height: 9.5%;
+  background: #0162C5;
+  color: white;
+  border: none;
+  outline: none;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+  position: relative;
+  left: 85%;
+  top: 80%;
+}
+
+header .header-info .header-info-button:hover {
+  background: #316beb;
+  cursor: pointer;
+}
+
+main {
+  height: 70%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+main .main-div-titles {
+  font-size: 30px;
+  line-height: 36px;
+  font-family: Peugeot;
+  text-align: center;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+main .main-cars-button {
+  font-size: 14px;
+  width: 118px;
+  height: 50px;
+}
+
+main .main-cars-button button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: #0162C5;
+  color: white;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+main .main-cars-button button:hover {
+  background: #316beb;
+  cursor: pointer;
+}
+
+main .main-arrows {
+  height: 100%;
+  width: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-arrows div {
+  width: 100%;
+  height: 5%;
+  background: #F7F7F7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  top: 5%;
+}
+
+main .main-arrows div:hover {
+  cursor: pointer;
+}
+
+main .main-stocks {
+  padding-top: 4.5%;
+  height: 18.5%;
+  width: 81.5%;
+}
+
+main .main-stocks .main-stocks-cars {
+  width: 100%;
+  height: 95.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car {
+  width: 32.6%;
+  height: 93%;
+  background: #F7F7F7;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-image {
+  height: 56.5%;
+  width: 100%;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info {
+  height: 43.5%;
+  width: 100%;
+  font-family: Peugeot;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info .main-stocks-cars-car-info-pos {
+  position: relative;
+  left: 10%;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info .main-stocks-cars-car-info-price {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  line-height: 26px;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info .main-stocks-cars-car-info-price :nth-child(1) {
+  font-size: 14px;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info .main-stocks-cars-car-info-price :nth-child(3) {
+  font-size: 24px;
+  font-family: 'Aclonica', sans-serif;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info .main-stocks-cars-car-info-price :nth-child(4) {
+  font-size: 24px;
+}
+
+main .main-stocks .main-stocks-cars .main-stocks-cars-car .main-stocks-cars-car-info .main-stocks-cars-car-info-description {
+  line-height: 26px;
+  font-size: 14px;
+  width: 80%;
+}
+
+main .main-store {
+  padding-top: 4.5%;
+  height: 18.6%;
+  width: 90.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main-store .main-store-block {
+  width: 89.6%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-store .main-store-block .main-store-cars-link {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 14px;
+  color: #0162C5;
+}
+
+main .main-store .main-store-block .main-store-cars-link:hover {
+  cursor: pointer;
+}
+
+main .main-store .main-store-block .main-store-cars {
+  width: 100%;
+  height: 84%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car {
+  width: 32.8%;
+  height: 100%;
+  border: 1px solid #d8d8d8;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-image {
+  width: 100%;
+  height: 60%;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-image .model {
+  text-align: center;
+  position: relative;
+  top: 15%;
+  font-family: 'Aclonica', sans-serif;
+  font-size: 18px;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info {
+  width: 100%;
+  height: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info .main-store-cars-model {
+  font-family: Peugeot;
+  line-height: 28px;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info .main-store-cars-model :nth-child(1) {
+  font-size: 18px;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info .main-store-cars-model :nth-child(2) {
+  font-size: 14px;
+  color: #979797;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info .main-store-cars-price {
+  font-family: Peugeot;
+  text-align: center;
+  line-height: 28px;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info .main-store-cars-price :nth-child(1) {
+  font-size: 14px;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .main-store-cars-info .main-store-cars-price :nth-child(2) {
+  font-size: 16px;
+  font-family: 'Aclonica', sans-serif;
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .car1 {
+  background: url(images/store-car1.png);
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .car2 {
+  background: url(images/store-car2.png);
+}
+
+main .main-store .main-store-block .main-store-cars .main-store-cars-car .car3 {
+  background: url(images/store-car3.png);
+}
+
+main .main-nezametil {
+  width: 87%;
+  height: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .main-nezametil div {
+  width: 3.4%;
+  height: 100%;
+  background: #0162C5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-nezametil div:hover {
+  cursor: pointer;
+}
+
+main .main-service {
+  padding-top: 3%;
+  height: 9.7%;
+  width: 81%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-service .main-service-info {
+  padding-top: 2%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+main .main-service .main-service-info .main-service-info-block {
+  width: 100%;
+  height: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-service .main-service-info .main-service-info-block .main-service-info-block-content {
+  width: 33%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .main-service .main-service-info .main-service-info-block .main-service-info-block-content .main-service-image {
+  height: 71%;
+}
+
+main .main-service .main-service-info .main-service-info-block .main-service-info-block-content .main-service-button {
+  font-size: 14px;
+  width: 240px;
+  height: 50px;
+}
+
+main .main-service .main-service-info .main-service-info-block .main-service-info-block-content .main-service-button button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: #0162C5;
+  color: white;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+main .main-service .main-service-info .main-service-info-block .main-service-info-block-content .main-service-button button:hover {
+  background: #316beb;
+  cursor: pointer;
+}
+
+main .main-promotions {
+  margin-top: 6%;
+  height: 9.5%;
+  width: 90.6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main-promotions .main-arrows div {
+  height: 10%;
+}
+
+main .main-promotions .main-promotions-block {
+  width: 89.7%;
+  height: 100%;
+}
+
+main .main-promotions .main-promotions-block .main-promotions-images {
+  position: relative;
+  top: 12%;
+  width: 100%;
+  height: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .main-promotions .main-promotions-block .main-promotions-images .main-promotions-image {
+  width: 33%;
+  height: 100%;
+}
+
+main .main-aboutus {
+  position: relative;
+  top: 2%;
+  height: 34.6%;
+  width: 100%;
+  background: #F1F3F2;
+}
+
+main .main-aboutus .main-div-titles {
+  position: relative;
+  margin-top: 4%;
+}
+
+main .main-aboutus .main-aboutus-info {
+  height: 90.3%;
+  margin-top: 3%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts {
+  height: 7.7%;
+  width: 78.2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: Peugeot;
+  font-size: 14px;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-logo {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-phone {
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  left: 9%;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-phone :nth-child(1) {
+  font-family: 'Aclonica', sans-serif;
+  letter-spacing: 2px;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-phone :nth-child(3) {
+  font-family: 'Aclonica', sans-serif;
+  color: #0162C5;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-phone :nth-child(3):hover {
+  color: #316beb;
+  cursor: pointer;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-links {
+  width: 17%;
+  line-height: 32px;
+  position: relative;
+  left: 18%;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-links .main-aboutus-links-apps {
+  margin-top: 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-links .main-aboutus-links-apps .viber {
+  margin-left: 15%;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-address {
+  height: 100%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  left: 38%;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-contacts .main-aboutus-address :nth-child(1) {
+  font-family: 'Aclonica', sans-serif;
+  letter-spacing: 2px;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-location {
+  width: 100%;
+  height: 40.5%;
+  margin-top: 3%;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-story {
+  width: 100%;
+  height: 40%;
+  margin-top: 3.5%;
+  background: url(/images/logo2.png);
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+  font-family: Peugeot;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 24px;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-story .main-aboutus-story-left {
+  width: 48%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-story .main-aboutus-story-left li {
+  color: #0162C5;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-story .main-aboutus-story-left li span {
+  color: black;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-story .main-aboutus-story-left .main-aboutus-story-left-title {
+  font-family: 'Aclonica', sans-serif;
+  letter-spacing: 2px;
+}
+
+main .main-aboutus .main-aboutus-info .main-aboutus-story .main-aboutus-story-right {
+  position: relative;
+  top: 10.5%;
+  width: 48%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer {
+  height: 18.5%;
+  width: 100%;
+}
+
+footer .footer-services {
+  width: 100%;
+  height: 46%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
+}
+
+footer .footer-services .footer-services-block {
+  width: 100%;
+  height: 260px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-services .footer-services-block .footer-services-images {
+  width: 21.5%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-services .footer-services-block .footer-services-images .footer-services-image {
+  width: 100%;
+  height: 73%;
+}
+
+footer .footer-services .footer-services-block .footer-services-images .footer-services-button {
+  width: 55%;
+  height: 50px;
+}
+
+footer .footer-services .footer-services-block .footer-services-images .footer-services-button button {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  background: #0162C5;
+  color: white;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+footer .footer-services .footer-services-block .footer-services-images .footer-services-button button:hover {
+  background: #316beb;
+  cursor: pointer;
+}
+
+footer .footer-info {
+  width: 100%;
+  height: 54%;
+  background: #F1F3F2;
+}
+
+footer .footer-info .footer-info-data {
+  width: 100%;
+  height: 88%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-info .footer-info-data .footer-info-block {
+  width: 56.3%;
+  height: 100%;
+}
+
+footer .footer-info .footer-info-data .footer-info-block .footer-info-inputs {
+  width: 100%;
+  height: 51%;
+  position: relative;
+  top: 17%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-info .footer-info-data .footer-info-block .footer-info-inputs .footer-info-input {
+  width: 47.3%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-info .footer-info-data .footer-info-block .footer-info-inputs .footer-info-input input {
+  height: 9%;
+  width: 97%;
+  border: none;
+  background: none;
+  border-bottom: 1px solid #bdbdbd;
+}
+
+footer .footer-info .footer-info-data .footer-info-card {
+  width: 43.8%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+footer .footer-info .footer-info-data .footer-info-card .footer-info-block {
+  position: relative;
+  top: 12.5%;
+  width: 57%;
+  height: 57.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .footer-info .footer-info-data .footer-info-card .footer-info-block .footer-info-block1 {
+  width: 100%;
+  height: 18%;
+  background: #0162C5;
+}
+
+footer .footer-info .footer-info-data .footer-info-card .footer-info-block .footer-info-block2 {
+  position: relative;
+  top: 7%;
+  width: 100%;
+  height: 18%;
+  background: white;
+}
+
+footer .footer-info .footer-info-data .footer-info-card .footer-info-block .footer-info-block3 {
+  position: relative;
+  top: 15%;
+  width: 60%;
+  height: 11%;
+}
+
+footer .footer-info .footer-info-data .footer-info-card .footer-info-block .footer-info-block4 {
+  position: relative;
+  top: 23%;
+  width: 54%;
+  height: 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .footer-info .footer-info-data .footer-info-card .footer-info-block .footer-info-block4 div {
+  height: 100%;
+  width: 50px;
+}
+
+footer .footer-info .footer-info-links {
+  height: 12%;
+  width: 100%;
+  background: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-info .footer-info-links .footer-info-links-block1 {
+  width: 97%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .footer-info .footer-info-links .footer-info-links-block1 :nth-child(1) {
+  width: 37.5%;
+  height: 100%;
+  border-right: 1px solid #b1b1b1;
+}
+
+footer .footer-info .footer-info-links .footer-info-links-block1 :nth-child(2) {
+  width: 18%;
+  height: 100%;
+  border-right: 1px solid #b1b1b1;
+}
+
+footer .footer-info .footer-info-links .footer-info-links-block1 :nth-child(3) {
+  width: 18%;
+  height: 100%;
+  border-right: 1px solid #b1b1b1;
+}
+
+footer .footer-info .footer-info-links .footer-info-links-block2 {
+  width: 3%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+footer .footer-info .footer-info-links .footer-info-links-block2 div {
+  height: 40px;
+  width: 100%;
+  background: #0162C5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=index.css.map */

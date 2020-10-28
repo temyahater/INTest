@@ -1,0 +1,829 @@
+$project-blue: #0162C5;
+
+body{
+    width: 1280px;
+    // max-width: 100vw;
+    height: 5341px;
+    padding: 0;
+    margin: 0 auto;
+    background: #F1F3F2;
+}
+
+header{
+    width: 100%;
+    height: 11.5%;
+
+    .header-nav{
+        height: 17%;
+        width: 100%;
+
+        .header-nav-icons{
+            height: 34%;
+            width: 100%;
+            display: flex;
+            background: #171717;
+
+            .header-nav-icon{
+                height: 100%;
+                padding-left: 2%;
+                display: flex;
+                align-items: center;
+                transition: 0.3s ease-out;
+
+                &:hover{
+                    background: rgb(65, 65, 65);
+                    cursor: pointer;
+                }
+            }
+
+            .header-nav-icons-car{
+                width: 10%;
+            }
+
+            .header-nav-icons-location{
+                width: 15%;
+            }
+
+            .header-nav-icons-message{
+                width: 13%;
+            }
+
+            .header-nav-icons-call{
+                width: 17%;
+            }
+
+            .header-nav-icons-point1{
+                width: 9%;
+            }
+
+            .header-nav-icons-point2{
+                width: 6%;
+            }
+
+            .header-nav-icons-recall{
+                width: 18%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family: 'Aclonica', sans-serif;
+                font-size: 14px;
+                line-height: 18px;
+                color: white;
+                background: $project-blue;
+                transition: 0.3s ease-out;
+
+                &:hover{
+                    background: rgb(49, 107, 235);
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .header-nav-links{
+            height: 66%;
+            width: 100%;
+            background: #142032;
+            display: flex;
+            font-family: 'Aclonica', sans-serif;
+            font-size: 14px;
+
+            .header-nav-link{
+                height: 100%;
+                padding-left: 2%;
+                display: flex;
+                align-items: center;
+                transition: 0.3s ease-out;
+                color: white;
+            }
+
+            .header-nav-links-button{
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .header-nav-links-logo{
+                width: 10%;
+            }
+
+            .header-nav-links-models{
+                width: 11%;
+            }
+
+            .header-nav-links-search{
+                width: 4.5%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .header-info{
+        height: 83%;
+        width: 100%;
+        background: url(/images/car.png);
+
+        .header-info-button{
+            width: 9.5%;
+            height: 9.5%;
+            background: $project-blue;
+            color: white;
+            border: none;
+            outline: none;
+            transition: 0.3s ease-out;
+            position: relative;
+            left: 85%;
+            top: 80%;
+
+            &:hover{
+                background: rgb(49, 107, 235);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+main{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+
+    .main-div-titles{
+        font-size: 30px;
+        line-height: 36px;
+        font-family: Peugeot;
+        text-align: center;
+        height: max-content;
+    }
+
+    .main-cars-button{
+        font-size: 14px;
+        width: 118px;
+        height: 50px;
+
+        button{
+            width: 100%;
+            height: 100%;
+            outline: none;
+            border: none;
+            background: $project-blue;
+            color: white;
+            transition: 0.3s ease-out;
+
+            &:hover{
+                background: rgb(49, 107, 235);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .main-arrows{
+        height: 100%;
+        width: 3%;
+        display: flex;
+        align-items: center;
+
+        div{
+            width: 100%;
+            height: 5%;
+            background: #F7F7F7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            top: 5%;
+            
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .main-stocks{
+        padding-top: 4.5%;  
+        height: 18.5%;
+        width: 81.5%;
+
+        .main-stocks-cars{
+            width: 100%;
+            height: 95.5%;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+
+            .main-stocks-cars-car{
+                width: 32.6%;
+                height: 93%;
+                background: #F7F7F7;
+
+                .main-stocks-cars-car-image{
+                    height: 56.5%;
+                    width: 100%;
+                }
+
+                .main-stocks-cars-car-info{
+                    height: 43.5%;
+                    width: 100%;
+                    font-family: Peugeot;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    .main-stocks-cars-car-info-pos{
+                        position: relative;
+                        left: 10%;
+                    }
+
+                    .main-stocks-cars-car-info-price{
+                        width: max-content;
+                        line-height: 26px;
+
+                        :nth-child(1){
+                            font-size: 14px;
+                        }
+
+                        :nth-child(3){
+                            font-size: 24px;
+                            font-family: 'Aclonica', sans-serif;
+                        }
+
+                        :nth-child(4){
+                            font-size: 24px;
+                        }
+                    }
+
+                    .main-stocks-cars-car-info-description{
+                        line-height: 26px;
+                        font-size: 14px;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    .main-store{
+        padding-top: 4.5%;  
+        height: 18.6%;
+        width: 90.6%;
+        display: flex;
+        justify-content: space-around;
+
+        .main-store-block{
+            width: 89.6%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            .main-store-cars-link{
+                width: 15%;
+                display: flex;
+                justify-content: space-around;
+                font-family: 'Aclonica', sans-serif;
+                font-size: 14px;
+                color: $project-blue;
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+
+            .main-store-cars{
+                width: 100%;
+                height: 84%;
+                display: flex;
+                justify-content: space-between;
+
+                .main-store-cars-car{
+                    width: 32.8%;
+                    height: 100%;
+                    border: 1px solid #d8d8d8;
+
+                    .main-store-cars-image{
+                        width: 100%;
+                        height: 60%;
+
+                        .model{
+                            text-align: center;
+                            position: relative;
+                            top: 15%;
+                            font-family: 'Aclonica', sans-serif;
+                            font-size: 18px;
+                        }
+                    }
+
+                    .main-store-cars-info{
+                        width: 100%;
+                        height: 35%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-around;
+
+                        .main-store-cars-model{
+                            font-family: Peugeot;
+                            line-height: 28px;
+
+                            :nth-child(1){
+                                font-size: 18px;
+                            }
+
+                            :nth-child(2){
+                                font-size: 14px;
+                                color: rgb(151, 151, 151);
+                            }
+                        }
+
+                        .main-store-cars-price{
+                            font-family: Peugeot;
+                            text-align: center;
+                            line-height: 28px;
+
+                            :nth-child(1){
+                                font-size: 14px;
+                            }
+
+                            :nth-child(2){
+                                font-size: 16px;
+                                font-family: 'Aclonica', sans-serif;
+                            }
+                        }
+                    }
+
+                    .car1{
+                        background: url(images/store-car1.png);
+                    }
+
+                    .car2{
+                        background: url(images/store-car2.png);
+                    }
+
+                    .car3{
+                        background: url(images/store-car3.png);
+                    }
+                }
+            }
+        }
+    }
+
+    .main-nezametil{
+        width: 87%;
+        height: 1%;
+        display: flex;
+        justify-content: flex-end;
+
+        div{
+            width: 3.4%;
+            height: 100%;
+            background: $project-blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+
+    .main-service{
+        padding-top: 3%;   
+        height: 9.7%;
+        width: 81%;
+        display: flex;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+
+        .main-service-info{
+            padding-top: 2%; 
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            
+            .main-service-info-block{
+                width: 100%;
+                height: 97%;
+                display: flex;
+                justify-content: space-between;
+
+                .main-service-info-block-content{
+                    width: 33%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .main-service-image{
+                        height: 71%;
+                    }
+
+                    .main-service-button{
+                        font-size: 14px;
+                        width: 240px;
+                        height: 50px;
+
+                        button{
+                            width: 100%;
+                            height: 100%;
+                            outline: none;
+                            border: none;
+                            background: $project-blue;
+                            color: white;
+                            transition: 0.3s ease-out;
+
+                            &:hover{
+                                background: rgb(49, 107, 235);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main-promotions{
+        margin-top: 6%;
+        height: 9.5%;
+        width: 90.6%;
+        display: flex;
+        justify-content: space-around;
+
+        .main-arrows{
+            div{
+                height: 10%;
+            }
+        }
+
+        .main-promotions-block{
+            width: 89.7%;
+            height: 100%;
+
+            .main-promotions-images{
+                position: relative;
+                top: 12%;
+                width: 100%;
+                height: 260px;
+                display: flex;
+                justify-content: space-between;
+
+                .main-promotions-image{
+                    width: 33%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+
+    .main-aboutus{
+        position: relative;
+        top: 2%;
+        height: 34.6%;
+        width: 100%;
+        background: #F1F3F2;
+
+        .main-div-titles{
+            position: relative;
+            margin-top: 4%;
+        }
+
+        .main-aboutus-info{
+            height: 90.3%;
+            margin-top: 3%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            .main-aboutus-contacts{
+                height: 7.7%;
+                width: 78.2%;
+                display: flex;
+                font-family: Peugeot;
+                font-size: 14px;
+
+                .main-aboutus-logo{
+                    height: max-content;
+                    width: max-content;
+                }
+
+                .main-aboutus-phone{
+                    height: 100%;
+                    width: max-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: relative;
+                    left: 9%;
+
+                    :nth-child(1){
+                        font-family: 'Aclonica', sans-serif;
+                        letter-spacing: 2px;
+                    }
+
+                    :nth-child(3){
+                        font-family: 'Aclonica', sans-serif;
+                        color: $project-blue;
+                        transition: 0.3s ease-out;
+
+                        &:hover{
+                            color: rgb(49, 107, 235);
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .main-aboutus-links{
+                    width: 17%;
+                    line-height: 32px;
+                    position: relative;
+                    left: 18%;
+                    .main-aboutus-links-apps{
+                        margin-top: 18%;
+                        display: flex;
+                        .viber{
+                            margin-left: 15%;
+                        }
+                    }
+                }
+
+                .main-aboutus-address{
+                    height: 100%;
+                    width: max-content;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    position: relative;
+                    left: 38%;
+
+                    :nth-child(1){
+                        font-family: 'Aclonica', sans-serif;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+
+            .main-aboutus-location{
+                width: 100%;
+                height: 40.5%;
+                margin-top: 3%;
+            }
+
+            .main-aboutus-story{
+                width: 100%;
+                height: 40%;
+                margin-top: 3.5%;
+                background: url(/images/logo2.png);
+                background-repeat: no-repeat;
+                background-position-x: right;
+                background-position-y: bottom;
+                font-family: Peugeot;
+                font-size: 14px;
+                display: flex;
+                justify-content: space-between;
+                line-height: 24px;
+
+                .main-aboutus-story-left{
+                    width: 48%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    li{
+                        color: $project-blue;
+
+                        span{
+                            color: black;
+                        }
+                    }
+
+                    .main-aboutus-story-left-title{
+                        font-family: 'Aclonica', sans-serif;
+                        letter-spacing: 2px;
+                    }
+                }
+
+                .main-aboutus-story-right{
+                    position: relative;
+                    top: 10.5%;
+                    width: 48%;
+                    height: 80%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    height: 18.5%;
+    width: 100%;
+
+    .footer-services{
+        width: 100%;
+        height: 46%;
+        display: flex;
+        align-items: center;
+        background: white;
+
+        .footer-services-block{
+            width: 100%;
+            height: 260px;
+            display: flex;
+            justify-content: space-between;
+
+            .footer-services-images{
+                width: 21.5%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .footer-services-image{
+                    width: 100%;
+                    height: 73%;
+                }
+
+                .footer-services-button{
+                    width: 55%;
+                    height: 50px;
+
+                    button{
+                        width: 100%;
+                        height: 100%;
+                        outline: none;
+                        border: none;
+                        background: $project-blue;
+                        color: white;
+                        transition: 0.3s ease-out;
+            
+                        &:hover{
+                            background: rgb(49, 107, 235);
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-info{
+        width: 100%;
+        height: 54%;
+        background: #F1F3F2;
+
+        .footer-info-data{
+            width: 100%;
+            height: 88%;
+            display: flex;
+
+            .footer-info-block{
+                width: 56.3%;
+                height: 100%;
+
+                .footer-info-inputs{
+                    width: 100%;
+                    height: 51%;
+                    position: relative;
+                    top: 17%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .footer-info-input{
+                        width: 47.3%;
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        input{
+                            height: 9%;
+                            width: 97%;
+                            border:none;
+                            background: none;
+                            border-bottom: 1px solid rgb(189, 189, 189);
+                        }
+                    }
+                }
+            }
+
+            .footer-info-card{
+                width: 43.8%;
+                height: 100%;
+                display: flex;
+                justify-content: flex-end;
+
+                .footer-info-block{
+                    position: relative;
+                    top: 12.5%;
+                    width: 57%;
+                    height: 57.5%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+
+                    .footer-info-block1{
+                        width: 100%;
+                        height: 18%;
+                        background: $project-blue;
+                    }
+
+                    .footer-info-block2{
+                        position: relative;
+                        top: 7%;
+                        width: 100%;
+                        height: 18%;
+                        background:white;
+                    }
+
+                    .footer-info-block3{
+                        position: relative;
+                        top: 15%;
+                        width: 60%;
+                        height: 11%;
+                    }
+
+                    .footer-info-block4{
+                        position: relative;
+                        top: 23%;
+                        width: 54%;
+                        height: 18%;
+                        display: flex;
+                        justify-content: space-between;
+
+                        div{
+                            height: 100%;
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-info-links{
+            height: 12%;
+            width: 100%;
+            background: white;
+            display: flex;
+            align-items: center;
+
+            .footer-info-links-block1{
+                width: 97%;
+                height: 40%;
+                display: flex;
+
+                :nth-child(1){
+                    width: 37.5%;
+                    height: 100%;
+                    border-right: 1px solid rgb(177, 177, 177);
+                }
+
+                :nth-child(2){
+                    width: 18%;
+                    height: 100%;
+                    border-right: 1px solid rgb(177, 177, 177);
+                }
+
+                :nth-child(3){
+                    width: 18%;
+                    height: 100%;
+                    border-right: 1px solid rgb(177, 177, 177);
+                }
+            }
+
+            .footer-info-links-block2{
+                width: 3%;
+                height: 100%;
+                display: flex;
+                align-items: flex-end;
+
+                div{
+                    height: 40px;
+                    width: 100%;
+                    background: $project-blue;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+@import url(https://fonts.googleapis.com/css2?family=Aclonica&display=swap);
+@import url(//db.onlinewebfonts.com/c/a8255842f22d57e8d71520cd861bda96?family=Peugeot);
